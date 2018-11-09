@@ -12,3 +12,129 @@
    Filename: br_styles.css
 
 */
+
+html {
+    background-image: url(br_paper.png);
+    height: 100%;
+}
+
+header {
+    background-image: url(br_logo.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    width: 100%;
+    height: 110px;
+
+}
+
+body {
+    background: rgb(177, 164, 130);
+    border: 1px solid black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgb(51, 51, 51) 15px 0px 25px, rgb(51, 51, 51) -15px 0px 25px;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+nav#topnav {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav#topnav a {
+    width: 19.6%;
+    display: inline-block;
+    text-align: center;
+    background: radial-gradient(rgb(185, 183, 183), rgb(94, 93, 93));
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 1px solid rgba(66, 66, 66, 0.85);
+    border-radius: 30px;
+}
+
+nav#midnav {
+    width: 20%;
+    float: left;
+    margin-left: 4%;
+    border: 5px dashed black;
+    border-radius: 40px;
+    list-style: none;
+    background: radial-gradient(rgb(184, 157, 71), rgb(194, 168, 112), rgb(182, 136, 66));
+    box-shadow: rgb(51, 51, 51) 5px 0px 10px, rgb(51, 51, 51) -5px 0px 10px;
+    height: 160px;
+}
+
+nav#midnav li {
+    display: block;
+    text-align: center;
+}
+
+article {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+
+div.houseviews {
+    display: none;
+}
+
+
+a[id^=img]:hover+div.houseviews {
+    display: block;
+    position: absolute;
+    top: 67%;
+    left: 39%;
+
+}
+
+a[id^=img] {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    transform: scale(1.5, 1.5);
+    border: 10px inset rgb(73, 58, 38);
+    box-shadow: rgb(51, 51, 51) 5px 0px 10px, rgb(51, 51, 51) -5px 0px 10px;
+    filter: brightness(1.1);
+}
+
+aside {
+    width: 20%;
+    float: right;
+    display: block;
+    border: 5px double black;
+    border-radius: 20px;
+    margin-right: 4%;
+    background: linear-gradient(345deg, rgba(196, 154, 77, 0.8), rgba(151, 119, 12, 0.8) 80%);
+}
+
+aside ul {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 425px;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
