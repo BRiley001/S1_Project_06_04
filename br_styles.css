@@ -14,7 +14,7 @@
 */
 
 /* Main Styles */
-/* the entire page has a background of paper, and a height of the whole window, naturally centered. */
+/* the entire page has a background of paper, and a height of the whole window */
 html {
     background-image: url(br_paper.png);
     height: 100%;
@@ -63,7 +63,7 @@ nav#topnav {
 
 /* The links within the navigation list at the top take up just less than 1/5 of the page, displayed in a line, with the text being centered within it. Each one will have a gradient to make the links stand out more. Each link has its own area , which is specified */
 nav#topnav a {
-    width: 19.6%;
+    width: 19.5%;
     display: inline-block;
     text-align: center;
     background: radial-gradient(rgb(185, 183, 183), rgb(94, 93, 93));
@@ -153,7 +153,7 @@ img {
 }
 
 section {
-    width: 96%;
+    width: 94%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 50px;
