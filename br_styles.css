@@ -13,21 +13,18 @@
 
 */
 
+/* Main Styles */
+/* the entire page has a background of paper, and a height of the whole window, naturally centered. */
 html {
     background-image: url(br_paper.png);
     height: 100%;
+    min-width: 1080px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-header {
-    background-image: url(br_logo.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: center;
-    width: 100%;
-    height: 110px;
-
-}
-
+/* the body will take up 80% of the page, centered, with some very small borders, and have shadows along the sides to make it stand out */
 body {
     background: rgb(177, 164, 130);
     border: 1px solid black;
@@ -37,11 +34,24 @@ body {
     box-shadow: rgb(51, 51, 51) 15px 0px 25px, rgb(51, 51, 51) -15px 0px 25px;
 }
 
+/* All links are black, and have a very hard to see shadow that makes the text pop slightly, drawing attention to more parts of the page*/
 a {
     color: black;
-    text-decoration: underline;
+    text-shadow: rgba(20, 20, 20, 0.5) 5px 0px 25px;
 }
 
+/* Top of the Page Styles */
+/* The header will be the Browyer Realty logo, which will not repeat, taking up 50% of the body, centered. The entire header takes up 100% of the body, and goes 110 pixels down. */
+header {
+    background-image: url(br_logo.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    width: 100%;
+    height: 110px;
+}
+
+/* The navigation at the top takes up the entire width, displayed as a block, centered, with an overall border on the top and bottom of the page */
 nav#topnav {
     width: 100%;
     display: block;
@@ -51,6 +61,7 @@ nav#topnav {
     border-bottom: 1px solid black;
 }
 
+/* The links within the navigation list at the top take up just less than 1/5 of the page, displayed in a line, with the text being centered within it. Each one will have a gradient to make the links stand out more. Each link has its own area , which is specified */
 nav#topnav a {
     width: 19.6%;
     display: inline-block;
@@ -64,6 +75,8 @@ nav#topnav a {
     border-radius: 30px;
 }
 
+/* sides of the page styles */
+/* The navigation on the left middle takes up 1/5 the page, stays on the left, while not being on the left. The border is dashed, with curved corners, and having a gradient in its background, which is very slight in its changes. The entire box has a shadow, goes down 160 pixels, and the links within are spaced to take up the box */
 nav#midnav {
     width: 20%;
     float: left;
@@ -73,46 +86,17 @@ nav#midnav {
     list-style: none;
     background: radial-gradient(rgb(184, 157, 71), rgb(194, 168, 112), rgb(182, 136, 66));
     box-shadow: rgb(51, 51, 51) 5px 0px 10px, rgb(51, 51, 51) -5px 0px 10px;
-    height: 160px;
+    line-height: 2em;
+    font-size: 1.1em;
 }
 
+/* the list items within the navigation are displayed as blocks, and are centered */
 nav#midnav li {
     display: block;
     text-align: center;
 }
 
-article {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-}
-
-div.houseviews {
-    display: none;
-}
-
-
-a[id^=img]:hover+div.houseviews {
-    display: block;
-    position: absolute;
-    top: 67%;
-    left: 39%;
-
-}
-
-a[id^=img] {
-    color: black;
-    text-decoration: none;
-}
-
-img {
-    transform: scale(1.5, 1.5);
-    border: 10px inset rgb(73, 58, 38);
-    box-shadow: rgb(51, 51, 51) 5px 0px 10px, rgb(51, 51, 51) -5px 0px 10px;
-    filter: brightness(1.1);
-}
-
+/* the box on the right side takes up 1/5 the page, stays slightly offset from the right, and has a double border. The entire thing has an easier to see gradient, which makes the tet stand out while staying with the theme */
 aside {
     width: 20%;
     float: right;
@@ -123,18 +107,81 @@ aside {
     background: linear-gradient(345deg, rgba(196, 154, 77, 0.8), rgba(151, 119, 12, 0.8) 80%);
 }
 
+/* the ul within the box on the right has centered text */
 aside ul {
     text-align: center;
 }
 
+/* Middle of the Page Styles */
+/* The article with text is in the center, slightly down from the navigation above it.  */
+article {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+}
+
+/* The images are set to appear only when a box with a number is hovered over. This works because the images are usually not displayed, but when the box with a number is hovered over, the images are set to be displayed, naturally the images and links have specifications for how they look. The links have a box with a border. The images are scaled and brightened, and have a border meant to make the image look nicer, and more like a picture in a frame */
+div.houseviews {
+    display: none;
+}
+
+a[id^=img]:hover+div.houseviews {
+    display: block;
+    position: absolute;
+    top: 72%;
+    left: 39%;
+}
+
+a[id^=img] {
+    color: black;
+    text-decoration: none;
+    padding-right: 36px;
+    padding-left: 36px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid black;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+
+img {
+    transform: scale(1.5, 1.5);
+    border: 10px inset rgb(73, 58, 38);
+    box-shadow: rgb(51, 51, 51) 5px 0px 10px, rgb(51, 51, 51) -5px 0px 10px;
+    filter: brightness(1.1);
+}
+
+section {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+/* The h2 is the address near the top, it just is in the center, and has an underline */
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* the h3 determines how far down the section below it is. It also has the instructions for the images */
 h3 {
     margin-top: 425px;
     margin-bottom: 2%;
     text-align: center;
 }
 
-section {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+
+
+/* Bottom of the Page Styles */
+/* The footer spans the page, with a border on the top. The footer is offset from the top and bottom, is aligned to the center, and has spacing so that it takes up more of the footer */
+footer {
+    width: 100%;
+    border-top: 5px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    word-spacing: 2em;
+    letter-spacing: .8em;
 }
