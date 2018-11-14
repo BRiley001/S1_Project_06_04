@@ -129,7 +129,7 @@ div.houseviews {
 a[id^=img]:hover+div.houseviews {
     display: block;
     position: absolute;
-    top: 72%;
+    top: 76%;
     left: 39%;
 }
 
